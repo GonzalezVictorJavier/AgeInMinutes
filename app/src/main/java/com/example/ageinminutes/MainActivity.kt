@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this,
                     "The date selected is $selectedDayOfMonth/${selectedMonth+1}/$selectedYear", Toast.LENGTH_LONG).show()
                 findViewById<TextView>(R.id.tvSelectedDate).text = "$selectedDayOfMonth/${selectedMonth+1}/$selectedYear"
-                ageInMinutes = (year - selectedYear ) * 12 * 30 * 24 * 60
+                ageInMinutes = (((year - selectedYear ) * 12 ) + ((month  - selectedMonth))) * 30 * 24 * 60
                 findViewById<TextView>(R.id.tvAgeInMinutes).text = "$ageInMinutes"
             }
                 ,year
